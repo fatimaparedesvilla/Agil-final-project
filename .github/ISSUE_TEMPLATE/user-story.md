@@ -1,23 +1,24 @@
 ---
 name: User story
 about: This template is for creating user stories
-title: ''
-labels: ''
-assignees: ''
+title: 'Create product in catalog'
+labels: 'user story'
+assignees: 'me'
 
 ---
 
-**As a** [role]  
- **I need** [function]  
- **So that** [benefit]  
+**As a** catalog administrator  
+**I need** to create a product in the catalog  
+**So that** new products can be added to the system  
    
- ### Details and Assumptions
- * [document what you know]
+### Details and Assumptions
+* Product information includes name, description, price, and category
+* Only authorized administrators can create products
+* The catalog database is already configured
    
- ### Acceptance Criteria  
+### Acceptance Criteria  
    
- ```gherkin
- Given [some context]
- When [certain action is taken]
- Then [the outcome of action is observed]
- ```
+```gherkin
+Given I am an authenticated administrator
+When I submit valid product information
+Then the system creates the product successfully
